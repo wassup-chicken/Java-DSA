@@ -1,3 +1,5 @@
+package javadsa.bubblesort;
+
 import java.util.Arrays;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -17,18 +19,11 @@ public class BubbleSort {
                 }
             }
         }
-
         System.out.println(Arrays.toString(intArray));
-
     }
 
     public static void swap(int[] array, int i, int j) {
-        if (i == j) {
-            return;
-        }
-
         int temp = array[i];
-
         array[i] = array[j];
         array[j] = temp;
     }
