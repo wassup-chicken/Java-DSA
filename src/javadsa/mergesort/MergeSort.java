@@ -4,6 +4,8 @@ import java.util.Arrays;
 
 public class MergeSort {
 
+    //stable
+
     public static void main(String[] args) {
         int[] intArray = { 20, 35, -15, 7, 55, 1, -22};
 
@@ -84,7 +86,9 @@ public class MergeSort {
             temp[tempIndex++] = input[i] <= input[j] ? input[i++] : input[j++];
         }
 
+        //copies the remaining on the left side to the end of the array
         System.arraycopy(input, i , input, start + tempIndex, mid - i);
+        //copies the temp array back to original from start to where we traversed to on line 85.
         System.arraycopy(temp, 0, input, start, tempIndex);
     }
 }
